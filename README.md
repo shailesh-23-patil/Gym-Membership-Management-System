@@ -1,34 +1,59 @@
 # 🏋️ Gym Membership Management System
 
-A beginner-friendly gym management application built using **Python, Streamlit, and SQLite**. It helps gym administrators and staff manage gym members, membership plans, payments, and reports through a simple web interface.
+A beginner-friendly web application built with **Python, Streamlit, and SQLite** to manage gym members, membership plans, registrations, payments, and reports.
 
-## 📌 About the Project
+<p align="center">
+  <strong>Simple • Organized • User-Friendly</strong>
+</p>
 
-Managing gym memberships manually can be time-consuming. This project provides a digital solution for organizing member details, membership plans, and payment records in one place.
+---
 
-This application was developed as an academic mini project to demonstrate Python programming, database connectivity, authentication, and web application development.
+## 📌 Table of Contents
+
+- [About the Project](#-about-the-project)
+- [Features](#-features)
+- [Technology Stack](#-technology-stack)
+- [Project Structure](#-project-structure)
+- [Installation and Setup](#-installation-and-setup)
+- [How to Run the Project](#-how-to-run-the-project)
+- [How to Use the Web Application](#-how-to-use-the-web-application)
+- [User Roles](#-user-roles)
+- [Screenshots](#-screenshots)
+- [Troubleshooting](#-troubleshooting)
+- [Future Enhancements](#-future-enhancements)
+- [Author](#-author)
+
+## 📖 About the Project
+
+Managing a gym manually can be time-consuming. Gym staff need to maintain member details, membership plans, payment records, and other important information.
+
+The **Gym Membership Management System** provides a centralized web application to simplify these tasks. It allows authorized users to manage gym-related information through a browser instead of relying entirely on manual records.
+
+This project was developed as an academic mini project to demonstrate Python programming, database management, authentication, and web application development.
 
 ## ✨ Features
 
-- 📊 **Dashboard:** View gym management summaries and charts.
-- 👥 **Member Management:** Register, search, view, and update members.
-- 📋 **Membership Plans:** Manage available membership plans.
-- 📝 **Membership Registration:** Manage member memberships.
-- 💳 **Payment Management:** Record and view payment details.
-- 📈 **Reports:** View records and download supported reports as CSV files.
-- 🔐 **Role-Based Login:** Separate Admin and Staff access.
+- 📊 **Dashboard:** View gym management summaries and available charts.
+- 👥 **Member Management:** Register, search, view, and update member information.
+- 📋 **Membership Plans:** View and manage available plans.
+- 📝 **Membership Registration:** Associate members with membership plans.
+- 💳 **Payment Management:** Record and view payment information.
+- 📈 **Reports:** Review records and download supported reports in CSV format.
+- 🔐 **Role-Based Authentication:** Separate Admin and Staff access.
 - 🗄️ **SQLite Database:** Store application data locally.
-- 📱 **Web Interface:** Access the application through a browser.
+- 🌐 **Browser-Based Interface:** Use the application through a web browser.
+- 📂 **Automatic Database Initialization:** The application can initialize its local database when configured to do so.
 
 ## 🛠️ Technology Stack
 
 | Technology | Purpose |
 |---|---|
 | Python | Application logic |
-| Streamlit | User interface |
-| SQLite | Database |
-| Pandas | Data handling and reports |
+| Streamlit | Web interface |
+| SQLite | Local database |
+| Pandas | Data handling and tabular reports |
 | Matplotlib / Seaborn | Data visualization, where used |
+| Git and GitHub | Version control and project hosting |
 
 ## 📁 Project Structure
 
@@ -50,56 +75,74 @@ Gym-Membership-Management-System/
     └── payments.png
 ```
 
-**File descriptions:**
+### File Descriptions
 
-- `app.py` — Main application.
-- `auth.py` — Authentication and access control.
-- `database.py` — Database initialization and operations.
-- `requirements.txt` — Required Python packages.
-- `README.md` — Project documentation.
-- `.gitignore` — Prevents selected local and sensitive files from being tracked.
-- `screenshots/` — Application screenshots.
+| File | Description |
+|---|---|
+| `app.py` | Main Streamlit application |
+| `auth.py` | Authentication and access control |
+| `database.py` | Database initialization and operations |
+| `requirements.txt` | Required Python packages |
+| `README.md` | Project documentation |
+| `.gitignore` | Excludes selected local and sensitive files |
+| `screenshots/` | Application screenshots |
+
+The SQLite database is stored locally and should not be uploaded to the public repository.
+
+---
 
 ## 🚀 Installation and Setup
 
-Follow these steps to download and run the project on your computer.
+Follow these instructions to download and run the project on your computer.
 
 ### Prerequisites
 
-Install the following:
+Before starting, install:
 
-- Python compatible with the packages in `requirements.txt`
-- Git (optional if downloading the ZIP)
-- VS Code or another code editor
+- **Python:** A version compatible with the packages in `requirements.txt`
+- **VS Code:** Recommended code editor
+- **Git:** Optional if you download the ZIP file instead of cloning the repository
+- **Web browser:** Chrome, Edge, Firefox, or another modern browser
 
 Download Python: https://www.python.org/downloads/
+
+Download VS Code: https://code.visualstudio.com/
 
 ### Step 1: Download the Project
 
 **Option A — Download ZIP**
 
-1. Visit the [GitHub repository](https://github.com/shailesh-23-patil/Gym-Membership-Management-System).
+1. Open the [GitHub repository](https://github.com/shailesh-23-patil/Gym-Membership-Management-System).
 2. Click the green **Code** button.
 3. Select **Download ZIP**.
-4. Extract the ZIP file.
+4. Extract the downloaded ZIP file.
 5. Open the extracted folder in VS Code.
 
-**Option B — Clone using Git**
+**Option B — Clone Using Git**
 
-Open a terminal and run:
+Open PowerShell, Command Prompt, or the VS Code terminal and run:
 
 ```bash
 git clone https://github.com/shailesh-23-patil/Gym-Membership-Management-System.git
+```
+
+Move into the project folder:
+
+```bash
 cd Gym-Membership-Management-System
 ```
 
-### Step 2: Open the Terminal
+### Step 2: Open the Project Terminal
 
-In VS Code, select **Terminal → New Terminal**.
+Open the project folder in VS Code.
 
-Make sure the terminal is inside the project folder containing `app.py`.
+Select **Terminal → New Terminal** from the menu.
+
+Ensure the terminal is in the directory containing `app.py`.
 
 ### Step 3: Create a Virtual Environment
+
+A virtual environment keeps this project's Python packages separate from other projects.
 
 For Windows:
 
@@ -109,21 +152,29 @@ python -m venv .venv
 
 ### Step 4: Activate the Virtual Environment
 
-For Windows PowerShell:
+**Windows PowerShell:**
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
 ```
 
-For Windows Command Prompt:
+**Windows Command Prompt:**
 
 ```cmd
 .venv\Scripts\activate.bat
 ```
 
-After activation, `(.venv)` should appear at the beginning of your terminal prompt.
+After activation, you should see `(.venv)` at the beginning of the terminal prompt.
 
-### Step 5: Install Dependencies
+If PowerShell blocks activation, you can use Command Prompt or run this command in the current PowerShell session:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
+Then activate the environment again.
+
+### Step 5: Install the Required Packages
 
 Run:
 
@@ -132,64 +183,196 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-Wait for all packages to finish installing.
+Wait until the installation completes.
 
-### Step 6: Run the Application
+### Step 6: Verify the Project Files
 
-Run the following command:
+Make sure the main project files are present:
+
+```text
+app.py
+auth.py
+database.py
+requirements.txt
+```
+
+If any required file is missing, the application may fail to start.
+
+---
+
+## ▶️ How to Run the Project
+
+After installing the dependencies, start the application with:
 
 ```bash
 python -m streamlit run app.py
 ```
 
-Streamlit should provide a local address. Open it in your browser; the default is usually:
+Streamlit will start a local web server and display a URL in the terminal.
+
+The default address is usually:
 
 http://localhost:8501
 
-### Step 7: Log In
+Open the URL in your browser if it does not open automatically.
 
-Use the login page and the credentials configured for your local application. Follow any account setup instructions provided by the project.
+Keep the terminal running while using the application. To stop the server, press `Ctrl + C` in the terminal.
 
-Do not assume that a default account exists unless it is configured in the source code. Change any demo or default password before using the application with real data.
+**🎉 Your Gym Membership Management System is ready to explore!**
 
-**🎉 The application is now ready to use!**
+---
 
-## 🔐 User Roles
+## 🖥️ How to Use the Web Application
 
-The application supports two roles:
+After opening the application in your browser, follow these steps to explore its functionality.
 
-- **Admin:** Access to administrative features, including user management where enabled.
-- **Staff:** Access to permitted gym management features.
+### 1. 🔐 Login to the Application
 
-The available operations depend on the permissions implemented in the application.
+- Open the application URL in your browser.
+- Enter your username and password.
+- Log in using an account configured for your application.
+- Access the features available to your assigned role.
+
+Use the credentials configured in the application. Do not assume that a default account exists unless it is defined in the source code.
+
+### 2. 📊 Explore the Dashboard
+
+The dashboard provides an overview of the information managed by the system.
+
+- Review the available summary cards.
+- Explore the charts and statistics.
+- Use the dashboard to understand the current records in the application.
+
+The displayed metrics depend on the data stored in the local database.
+
+### 3. 👥 Manage Gym Members
+
+Open the member management section.
+
+- Register a new gym member.
+- Enter the required member details.
+- Search for existing members.
+- View member information.
+- Update details when necessary.
+
+Always verify the information before saving.
+
+### 4. 📋 Manage Membership Plans
+
+Open the membership plans section.
+
+- View the available membership plans.
+- Review plan details and pricing.
+- Add or update plans if your role has permission to do so.
+
+The available operations depend on the application's implementation.
+
+### 5. 📝 Register Memberships
+
+Use the membership registration functionality to associate a member with a plan.
+
+1. Open the relevant membership section.
+2. Select the appropriate member.
+3. Choose an available membership plan.
+4. Enter the required details.
+5. Save the registration.
+6. Verify the resulting record.
+
+### 6. 💳 Manage Payments
+
+Open the payment management section.
+
+- Record payment information where permitted.
+- Review available payment records.
+- Check the associated member and payment details.
+- Verify the information after saving.
+
+Use sample payment data while testing the project.
+
+### 7. 📈 View Reports and Export Data
+
+Open the reports section.
+
+- Review the reports available in the application.
+- Examine the relevant records and summaries.
+- Download supported reports using the available CSV download options.
+- Open downloaded CSV files using Microsoft Excel or another spreadsheet application.
+
+### 8. 👤 Use Admin and Staff Accounts
+
+The application supports role-based access.
+
+- **Admin:** Can access administrative functions, including user management where implemented.
+- **Staff:** Can access the gym management features allowed by the application's permissions.
+
+Some functions may be restricted depending on the logged-in user's role.
+
+### 9. 🚪 Logout
+
+When you finish using the application, use the logout option if it is provided by the interface.
+
+Close the browser tab when finished.
+
+### 💡 Tips for First-Time Users
+
+- Start with sample data.
+- Explore the dashboard before entering records.
+- Use test member details while learning the application.
+- Verify payment and membership details before saving.
+- Keep login credentials private.
+- Do not enter real personal information into a publicly accessible demonstration application.
+
+*Note: Available screens and actions depend on the functionality implemented in the current source code.*
+
+---
+
+## 🔐 User Roles and Security
+
+The system supports Admin and Staff roles with role-based access to application features.
+
+For safer use:
+
+- Do not share passwords or private credentials.
+- Change any demo or default password before using the application with real data.
+- Do not commit the local database file to GitHub.
+- Do not upload real member information or secrets.
+- Review authentication and authorization before deploying the application online.
+
+This project is intended for educational use and should not be considered production-ready without additional security review.
+
+---
 
 ## 📸 Screenshots
 
-### Login Page
+The following screenshots demonstrate the application's interface.
+
+### 🔑 Login Page
 
 ![Login Page](screenshots/login.png)
 
-### Dashboard
+### 📊 Dashboard
 
 ![Dashboard](screenshots/dashboard.png)
 
-### Member Management
+### 👥 Member Management
 
 ![Member Management](screenshots/member.png)
 
-### Membership Plans
+### 📋 Membership Plans
 
 ![Membership Plans](screenshots/membership_plans.png)
 
-### Payment Management
+### 💳 Payment Management
 
 ![Payments](screenshots/payments.png)
 
-*Note: Use sample data in public screenshots. Remove or blur real names, phone numbers, email addresses, and other private information.*
+**Privacy reminder:** Use sample data in screenshots published on GitHub. Remove or blur real names, phone numbers, email addresses, and other private information.
+
+---
 
 ## 🧰 Troubleshooting
 
-### Python is not recognized
+### Problem 1: Python Is Not Recognized
 
 Check whether Python is installed:
 
@@ -203,7 +386,9 @@ On Windows, you can also try:
 py --version
 ```
 
-### Streamlit is not recognized
+If neither command works, install Python and ensure it is available in PATH.
+
+### Problem 2: Streamlit Is Not Recognized
 
 Activate the virtual environment and install the dependencies:
 
@@ -211,55 +396,93 @@ Activate the virtual environment and install the dependencies:
 python -m pip install -r requirements.txt
 ```
 
-Then run:
+Start Streamlit using:
 
 ```bash
 python -m streamlit run app.py
 ```
 
-### Application does not open
+### Problem 3: The Application Does Not Open
 
-Check the terminal for error messages. If necessary, open:
+Check the terminal for error messages.
+
+Try opening the default local address manually:
 
 http://localhost:8501
 
-### Database errors
+Make sure the Streamlit process is still running.
 
-Make sure the project folder is writable and check `database.py` for the database initialization logic and database path.
+### Problem 4: Missing Module Error
 
-### Port already in use
+If Python reports that a module is missing, activate the virtual environment and run:
 
-Run the application on another port:
+```bash
+pip install -r requirements.txt
+```
+
+### Problem 5: Database Error
+
+Check that:
+
+- The project folder is writable.
+- `database.py` is present.
+- The database initialization code runs correctly.
+- The application is using the expected database path.
+
+The local database may be generated automatically depending on the initialization logic.
+
+### Problem 6: Login Does Not Work
+
+Check the account setup and authentication logic in `auth.py` and the related database functions.
+
+Use only credentials configured for your local application. Do not publish passwords or database files to resolve login issues.
+
+### Problem 7: Port 8501 Is Already in Use
+
+Start the application using another port:
 
 ```bash
 python -m streamlit run app.py --server.port 8502
 ```
 
-Then open http://localhost:8502.
+Open:
+
+http://localhost:8502
+
+---
 
 ## 🔮 Future Enhancements
 
-Possible improvements include:
+Possible future improvements include:
 
-- Membership expiry notifications
-- Automatic renewal reminders
-- PDF report generation
-- Password change and reset functionality
-- Improved dashboard analytics
-- Secure cloud deployment
+- 📅 Membership expiry notifications
+- 🔔 Automatic renewal reminders
+- 📄 PDF report generation
+- 🔑 Password change and password reset functionality
+- 📊 Improved dashboard analytics
+- 💰 Enhanced payment summaries
+- ☁️ Secure cloud deployment
+- 🛡️ Additional security and access-control improvements
 
-These are potential improvements and may not be available in the current version.
+These are proposed improvements and may not be available in the current version.
+
+---
 
 ## 👨‍💻 Author
 
 **Shailesh Patil**
 
-GitHub Profile: https://github.com/shailesh-23-patil
-
-Project Repository: https://github.com/shailesh-23-patil/Gym-Membership-Management-System
+- GitHub Profile: [shailesh-23-patil](https://github.com/shailesh-23-patil)
+- Project Repository: [Gym Membership Management System](https://github.com/shailesh-23-patil/Gym-Membership-Management-System)
 
 ---
 
-⭐ If you find this project helpful for learning, feel free to explore the code and build on it.
+## ⭐ Support
 
-**Disclaimer:** This project is intended for educational purposes. Review authentication, data protection, and deployment security before using it with real gym members.
+If you find this project helpful for learning, feel free to explore the source code and build upon it.
+
+If you use this project as a learning reference, consider giving the repository a ⭐ on GitHub.
+
+## 📜 Disclaimer
+
+This project was developed for academic and educational purposes. Review the application's authentication, data protection, database management, and deployment security before using it with real gym members.
